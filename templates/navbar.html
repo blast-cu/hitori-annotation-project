@@ -1,0 +1,20 @@
+<nav class="navbar mb-5 border-bottom" >
+    <div class="container">
+
+      {% if user %}
+
+        <a class="navbar-brand mx-auto" href="/results/{{user}}">
+          <h4>Result Vizualization</h4>
+        </a>
+
+      {% else %}
+
+        <a class="navbar-brand mx-auto" href="/">
+          <h4>Result Vizualization</h4>
+        </a>
+
+      {% endif %}
+
+
+    </div>
+</nav>

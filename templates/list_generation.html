@@ -1,0 +1,34 @@
+{% extends "index.html" %}
+
+{% block script %} {% endblock %}
+
+{% block content %} 
+
+<div class="container">
+
+    {% for run , results in  run2results.items() %}
+
+    <div class="row">
+
+        <h4> {{run}}  </h4>    
+        <ul>
+
+        {% for result in results %}
+
+            <li>
+                <a href="/interact/{{user}}/{{run}}/{{result.stage}}/{{result.first_file}}">interact/{{user}}/{{run}}/{{result.stage}}/{{result.first_file}}</a>
+            </li>
+            
+
+        {% endfor %}
+        </ul>
+
+        
+            
+    </div>
+
+    {% endfor %}
+</div>
+
+
+{% endblock %}

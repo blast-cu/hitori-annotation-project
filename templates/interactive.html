@@ -1,0 +1,116 @@
+{% extends "index.html" %}
+
+{% block script %} 
+
+    {% include "script.html" %}
+
+{% endblock %}
+
+{% block content %}
+
+    {% include "warning.html" %}
+
+    {% include "file_nav.html"   %}
+    
+    
+
+<form action="/interact/{{user}}/{{run}}/{{stage}}/{{curr_file}}" class="row align-middle" method="post">
+
+    <input type="hidden" name="first_step" value="{{first_step_index}}" />
+
+    <div class="accordion" id="generation">
+        {% for sr in sampled_result %}
+
+            <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{sr.step}}" aria-expanded="false" aria-controls="collapse{{sr.id}}">
+                
+                    <h4 {% if sr.is_last %}style="color: #fc6471; text-decoration:underline"{% endif %}>Target : {{sr.target}}    | Action : {{sr.value}}</h4>
+                
+                    
+                </button>
+            </h2>
+            <div id="collapse{{sr.step}}" class="accordion-collapse {% if sr.is_last %}show {% endif %}collapse">
+                    <div class="accordion-body">
+                        <div class="row py-5">
+
+                            {% include "hitori.html" %}
+
+                            <div class="col-4 text-left overflow-y-scroll" style="max-height: 480px;">
+
+                                    {{sr.answer | safe }}
+                            </div>
+
+                        <a class="btn btn-primary" 
+                            data-bs-toggle="collapse" 
+                            href="#Z3{{sr.step}}" role="button">
+                            Z3
+                        </a>
+                        <div class="collapse" id="Z3{{sr.step}}">
+                            <div class="card card-body">
+                                <code style="white-space: pre-line; ">
+                                    {{sr.z3}}
+                                </code>
+                            </div>
+                        </div>
+
+                        <a class="btn btn-primary" 
+                            data-bs-toggle="collapse" 
+                            href="#solver_explanation{{sr.step}}" role="button">
+                            Clause Explanations
+                        </a>
+                        <div class="collapse" id="solver_explanation{{sr.step}}">
+                            <div class="card card-body">
+                                <code style="white-space: pre-line; ">
+                                    {{sr.solver_explanation}}
+                                </code>
+                            </div>
+                        </div>
+
+
+                        </div>      
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+    </div>
+
+
+    <ul class="nav nav-pills my-3 justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item mx-5" role="presentation">
+            <button class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"></button>
+        </li>
+        <li class="nav-item mx-5" role="presentation">
+            <input type="radio" class="btn-check" name="reject" id="success-outlined" autocomplete="off" value="understandable">
+            <label class="btn btn-outline-success" for="success-outlined" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"> <strong>ACCEPT</strong> <br> <em>This explanation can be understood.</em> </label>
+        </li>
+        <li class="nav-item mx-5" role="presentation">
+            <input type="radio" class="btn-check" name="reject" id="reject-outlined" autocomplete="off" value="reject">
+            <label class="btn btn-outline-danger" for="reject-outlined" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="radio" role="tab" aria-controls="pills-contact" aria-selected="false"><strong>REJECT</strong> <br> <em>This explanation cannot be understood.</em></label>                
+        </li>
+    </ul>
+    
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0"></div>
+
+        {% include "rubrics.html" %}
+
+
+        <div class="tab-pane fade text-center mt-2" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+            This example has been rejected. No annotation is required. Go ahead and hit submit. 
+        </div>
+    </div>
+
+    
+    <div class="input-group pt-5">
+        <span class="input-group-text">Notes</span>
+        <textarea class="form-control" name="notes" aria-label="With textarea"></textarea>
+    </div> 
+
+    <div class="col-12 my-2 text-center pt-5">
+        <button type="submit" class="btn btn-lg btn-outline-dark px-5">Submit.   </button>
+    </div>
+
+</form>
+
+{% endblock %}

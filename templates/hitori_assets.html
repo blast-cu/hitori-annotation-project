@@ -1,0 +1,61 @@
+<style>
+
+    .hitori-grid {
+        display: inline-grid;
+        gap: 2px;
+        background-color: #dee2e6;
+        padding: 2px;
+        border-radius: 4px;
+    }
+
+    .hitori-cell {
+        width: 50px;
+        height: 50px;
+        font-weight: bold;
+        font-size: 1.2rem;
+        border: 1px solid #ced4da;
+        transition: background-color 0.2s;
+    }
+
+    /* State Classes */
+    .state-default { background-color: #ffffff; color: #212529; }
+    .state-shaded { background-color: #007bff; color: #ffffff; } /* Blue */
+    .state-unshaded { background-color: #ffc107; color: #212529; } /* Yellow */
+
+    .hitori-cell:disabled {
+        /* background-color: #007bff; */
+        opacity: 0.5;
+        cursor: not-allowed;
+        border: 2px solid #d21a20; /* Darker border to indicate it's a "given" */
+    }
+
+    /* Optional: Add a small lock icon or different texture to locked cells */
+    .locked-indicator {
+        position: relative;
+    }
+
+    .locked-indicator::after {
+        content: "•";
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        font-size: 10px;
+        color: rgba(0,0,0,0.3);
+    }
+
+    .grid-label {
+        font-weight: bold;
+        color: #6c757d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hitori-layout {
+        display: grid;
+        grid-template-columns: 40px auto; /* 40px for row labels */
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>

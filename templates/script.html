@@ -1,0 +1,110 @@
+<!-- {{all_shaded}} -->
+
+<script>
+
+    
+
+    const puzzleContents = {{ grid | tojson }};
+    let shaded = {{ all_shaded | tojson | safe }};
+    let unshaded = {{ all_unshaded | tojson | safe}};
+
+    // Let's assume these are pre-populated with some "Givens"
+    // let shaded = [
+    //                 [false , false, false, false, false], 
+    //                 [false , false, false, false, false], 
+    //                 [false , false, false, false, false], 
+    //                 [false , false, false, false, false], 
+    //                 [false , false, false, false, false], 
+    //             ];
+
+    // let unshaded =[
+    //                 [false , false, false, false, false], 
+    //                 [false , false, false, false, false], 
+    //                 [false , false, false, false, false], 
+    //                 [false , false, false, false, false], 
+    //                 [false , false, false, false, false], 
+    //             ];
+
+    const rows = puzzleContents.length;
+    const cols = puzzleContents[0].length;
+
+    function initGrid() {
+        const container = document.getElementById('grid-container');
+        const colLabels = document.getElementById('col-headers');
+        const rowLabels = document.getElementById('row-headers');
+
+        container.innerHTML = ''; // Clear existing
+        container.style.gridTemplateColumns = `repeat(${cols}, 50px)`;
+
+        for (let c = 0; c < cols; c++) {
+            const div = document.createElement('div');
+            div.className = 'grid-label';
+            div.style.width = '52px'; // Cell width + gap
+            div.innerText = c + 1;
+            colLabels.appendChild(div);
+        }
+
+        for (let r = 0; r < rows; r++) {
+
+            const rowDiv = document.createElement('div');
+            rowDiv.className = 'grid-label';
+            rowDiv.style.height = '52px'; // Cell height + gap
+            rowDiv.innerText = r + 1;
+            rowLabels.appendChild(rowDiv);
+
+
+            for (let c = 0; c < cols; c++) {
+                const btn = document.createElement('button');
+                btn.id = `cell-${r}-${c}`;
+                btn.innerText = puzzleContents[r][c];
+                btn.type = 'button';
+                
+                // 1. Determine Initial Visual State
+                let isImmutable = false;
+
+                if (shaded[r][c]) {
+                    btn.className = 'hitori-cell state-shaded';
+                    isImmutable = true;
+                } else if (unshaded[r][c]) {
+                    btn.className = 'hitori-cell state-unshaded';
+                    isImmutable = true;
+                } else {
+                    btn.className = 'hitori-cell state-default';
+                }
+
+                // 2. Apply Immutability
+                if (isImmutable) {
+                    btn.disabled = true;
+                    btn.classList.add('locked-indicator');
+                } else {
+                    // Only add click listener if NOT immutable
+                    btn.onclick = () => toggleCell(r, c);
+                }
+                
+                container.appendChild(btn);
+            }
+        }
+    }
+
+    function toggleCell(r, c) {
+        const btn = document.getElementById(`cell-${r}-${c}`);
+
+        // Cycle: Default -> Shaded -> Unshaded -> Default
+        if (!shaded[r][c] && !unshaded[r][c]) {
+            shaded[r][c] = true;
+            btn.className = 'hitori-cell state-shaded';
+        } 
+        else if (shaded[r][c]) {
+            shaded[r][c] = false;
+            unshaded[r][c] = true;
+            btn.className = 'hitori-cell state-unshaded';
+        } 
+        else {
+            unshaded[r][c] = false;
+            btn.className = 'hitori-cell state-default';
+        }
+    }
+
+    initGrid();
+
+</script>

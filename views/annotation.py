@@ -1,4 +1,4 @@
-from flask import render_template ,  request , redirect , url_for
+from flask import render_template ,  request , redirect , url_for , flash
 import json 
 import random
 import os
@@ -40,7 +40,7 @@ def interact(user, run , stage , fname) :
         #---- Create output path  ----#
 
         
-        save_path = os.path.join(save_dir, fname+'.json')
+        save_path = os.path.join(save_dir, user+'_'+fname+'.json')
 
         #---- Read the input ----#
 
@@ -77,11 +77,18 @@ def interact(user, run , stage , fname) :
 
         #---- Move to the next puzzle----#
 
-        return redirect(url_for('interact' , 
-                        user=user,
-                        run=run, 
-                        stage=stage, 
-                        fname=next_file))
+        if next_file : 
+
+            return redirect(url_for('interact' , 
+                            user=user,
+                            run=run, 
+                            stage=stage, 
+                            fname=next_file))
+
+        else : 
+
+            return redirect(url_for('list_proofs', user=user,))
+
     
     next_file = find_adjacent_items(gen_files, fname, 'next')
     prev_file = find_adjacent_items(gen_files, fname, 'previous')
@@ -142,7 +149,7 @@ def interact(user, run , stage , fname) :
 
     #---- unshade all cells if unstaged -----#
 
-    if stage == 'unstaged' : 
+    if 'u' in stage.lower() : 
         all_shaded = [[False]*len(all_shaded[0])]*len(all_shaded)
         all_unshaded = [[False]*len(all_unshaded[0])]*len(all_unshaded)
 
@@ -158,6 +165,8 @@ def interact(user, run , stage , fname) :
                 'warning' : warning,
                 'run' : run,
                 'stage' : stage,
+                'target_row' : row,
+                'target_col' : col,
                 'rubrics' : rubrics,
                 'rubric_dimensions' : rubric_dimensions,
                 'quality_rubrics' : quality_rubrics,

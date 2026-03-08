@@ -2,11 +2,10 @@ from flask import render_template
 import glob
 import os
 
-
 def list_proofs(user) : 
 
     src_dir = "data/generation/"
-    experiment_versions = []
+    experiment_versions = ['annotate']
 
     print(experiment_versions)
     

@@ -25,7 +25,7 @@
             <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{sr.step}}" aria-expanded="false" aria-controls="collapse{{sr.id}}">
                 
-                    <h4 {% if sr.is_last %}style="color: #fc6471; text-decoration:underline"{% endif %}>Target : {{sr.target}}    | Action : {{sr.value}}</h4>
+                    <h4 {% if sr.is_last %}style="color: #fc6471; text-decoration:underline"{% endif %}>{{sr.target}} is going to be {{sr.value}}.</h4>
                 
                     
                 </button>
@@ -82,11 +82,11 @@
         </li>
         <li class="nav-item mx-5" role="presentation">
             <input type="radio" class="btn-check" name="reject" id="success-outlined" autocomplete="off" value="understandable">
-            <label class="btn btn-outline-success" for="success-outlined" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"> <strong>ACCEPT</strong> <br> <em>This explanation can be understood.</em> </label>
+            <label class="btn btn-outline-success" for="success-outlined" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"> <strong>ACCEPT</strong> <br> <em>I can parse this explanation in under 5 mins.</em> </label>
         </li>
         <li class="nav-item mx-5" role="presentation">
             <input type="radio" class="btn-check" name="reject" id="reject-outlined" autocomplete="off" value="reject">
-            <label class="btn btn-outline-danger" for="reject-outlined" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="radio" role="tab" aria-controls="pills-contact" aria-selected="false"><strong>REJECT</strong> <br> <em>This explanation cannot be understood.</em></label>                
+            <label class="btn btn-outline-danger" for="reject-outlined" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="radio" role="tab" aria-controls="pills-contact" aria-selected="false"><strong>REJECT</strong> <br> <em>I cannot parse this explaantion in unders 5 mins.</em></label>                
         </li>
     </ul>
     

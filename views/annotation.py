@@ -149,7 +149,7 @@ def interact(user, run , stage , fname) :
 
     #---- unshade all cells if unstaged -----#
 
-    if 'u' in stage.lower() : 
+    if stage.lower() in ['unstaged' , 'typeu'] : 
         all_shaded = [[False]*len(all_shaded[0])]*len(all_shaded)
         all_unshaded = [[False]*len(all_unshaded[0])]*len(all_unshaded)
 

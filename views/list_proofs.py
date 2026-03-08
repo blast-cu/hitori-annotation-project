@@ -5,7 +5,7 @@ import os
 def list_proofs(user) : 
 
     src_dir = "data/generation/"
-    experiment_versions = ['annotate']
+    experiment_versions = ['annotate' , 'training']
 
     print(experiment_versions)
     

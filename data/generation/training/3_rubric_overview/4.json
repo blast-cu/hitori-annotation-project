@@ -1,7 +1,7 @@
 [
     {
         "step": "1",
-        "target": "r4c4",
+        "target": "r1c1",
         "value": "unshaded",
         "unshaded_cells": [],
         "shaded_cells": [],
@@ -25,7 +25,7 @@
                 false,
                 false,
                 false,
-                true
+                false
             ],
             [
                 false,
@@ -58,7 +58,7 @@
                 false
             ],
             [
-                true,
+                false,
                 false,
                 false,
                 false,
@@ -69,7 +69,7 @@
                 false,
                 false,
                 false,
-                true
+                false
             ],
             [
                 false,
@@ -122,7 +122,7 @@
                 1
             ]
         ],
-        "answer": "**Separation Rule** \n\n Two shaded cells **cannot** touch each other. \n\n From the previous step, we know that `r3c4` is shaded. \n\n We can also see that `r3c4` also shares an edge with `r4c4`. \n\n Therefore, `r4c4` has to be shaded.",
+        "answer": "**Repetition** \n\n\tWe have shown `r3c4` has to be shaded. \nWe have shown `r3c4` has to be shaded. \n\n **Verbosity** \n\n `{Explanation...}` \n`This step-by-step explanation ensures that all moves are justified using the beginner-friendly rulebook and avoids any technical jargon or references to clauses.` \n\n **Proof Artifacts** \n\n From the clause `(or c07_04 c08_04)`,",
         "reasoning": ""
     }
 ]

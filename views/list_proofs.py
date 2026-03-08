@@ -10,11 +10,11 @@ def list_proofs(user) :
     print(experiment_versions)
     
     if not experiment_versions : 
-        experiment_versions = os.listdir(src_dir)
+        experiment_versions = sorted(os.listdir(src_dir))
 
     run2results = {}
     for run in experiment_versions : 
-        stages = os.listdir(os.path.join(src_dir , run))
+        stages = sorted(os.listdir(os.path.join(src_dir , run)))
         for stage in stages : 
             fnames = os.listdir(os.path.join(src_dir , run, stage))
             first_file = sorted([f.replace('.json' , '') for f in fnames ])[0]

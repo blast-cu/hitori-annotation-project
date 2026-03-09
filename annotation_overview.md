@@ -38,3 +38,4 @@ We hope to get:
 
 1. Cloning `hitori-annotation-project` from the BLAST repository. 
 2. Install dependencies with `pip install -r requirements.txt` 
+3. Run the app with `python -m app`

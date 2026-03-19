@@ -18,13 +18,13 @@ rubric_dimensions = [
     } , 
 
     {
-        'name' : '👎 <b>Minor Errors: </b> Small errors that can be ignored and don\'t affect the whole explanation.' , 
+        'name' : '👎 <b>Minor Errors: </b> Small errors that can be ignored and does not affect the whole explanation.' , 
         'value' : 3
     } , 
 
     
     {
-        'name' : '❌<b>Major Errors: </b> Significant errors that can\'t be overcome, and affect the overall explanation of the puzzle.' , 
+        'name' : '❌ <b>Major Errors: </b> Significant errors that cannot be overcome, and affect the overall explanation of the puzzle.' , 
         'value' : 1
     } , 
 ]
@@ -33,7 +33,7 @@ understand_rubrics = [
 
     {
         'name' : 'Does explanation provided help you understand the step?',
-        'definition' : 'Does the step\'s outcome become clear by following the explanation?', 
+        'definition' : '<br><em>Does the step\'s outcome become clear by following the explanation?</em>', 
         'shortname': 'understand'
     } 
 
@@ -42,7 +42,7 @@ understand_rubrics = [
 understand_rubric_dimensions = [
 
     {
-        'name' : '😊 Helps understand Completely! ' , 
+        'name' : '😊 Helps understand completely! ' , 
         'value' : 5
     } , 
 

@@ -12,9 +12,9 @@
         <div class="col text-center">
             <h4>Curr File: 
                 {% if run == "training" %}
-                    <a href="/"><span style="color: blue;"> {{curr_file}} </span></a>
+                   {{curr_file}}
                 {% else %}
-                    <a href="/"><span style="color: blue;"> {{run}}/{{stage}}/{{curr_file}} </span></a>
+                    {{run}}/{{stage}}/{{curr_file}}
                 {% endif %}
 
 

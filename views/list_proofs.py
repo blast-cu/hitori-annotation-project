@@ -1,11 +1,13 @@
 from flask import render_template 
 import glob
 import os
+import json
 
 def list_proofs(user) : 
 
     src_dir = "data/generation/"
-    experiment_versions = ['annotate' , 'training']
+    user_data = json.load(open('data/users.json'))
+    experiment_versions = [user_data[user]['assigned_task_set'] , 'training']
 
     print(experiment_versions)
     

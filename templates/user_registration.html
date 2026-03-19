@@ -1,0 +1,104 @@
+{% extends "index.html" %}
+
+{% block script %} {% endblock %}
+
+{% block content %} 
+
+
+<div class="row text-left">
+
+
+
+<form action="/register/{{user}}" class="col-8 justify-content-center " method="post">
+
+    <div class="mb-3">
+        <em>Registering user <strong>{{user}}</strong></em>
+    </div>
+
+    <h5>Hitori Experience</h5>
+
+    <i>How familiar are you with Hitori?</i>
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="hitori_xp" id="hitori_xp-1" value="1">
+        <label class="form-check-label" for="hitori_xp-1">
+            🏅 <b>No Experience</b> This is my first time playing.
+        </label>
+    </div>
+    
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="hitori_xp" id="hitori_xp-2" value="2">
+        <label class="form-check-label" for="hitori_xp-2">
+            🏅🎖️ <b>Some familiarity</b> I've played before, but don't play very often.  
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="hitori_xp" id="hitori_xp-3" value="3">
+        <label class="form-check-label" for="hitori_xp-3">
+            🏅🎖️🏅 <b>Very familiar</b> I know all the rules and play games without help.
+        </label>
+    </div>
+
+    <hr>
+
+    <h5>Puzzle Experience</h5>
+
+    <i>Have you played puzzle games similar to Hitori, like Sudoku, Kakuro, Futoshiki?</i>
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="puzzle_xp" id="puzzle_xp-1" value="1">
+        <label class="form-check-label" for="puzzle_xp-1">
+            🏅 <b>No Experience</b> This is my first time playing puzzle games.
+        </label>
+    </div>
+    
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="puzzle_xp" id="puzzle_xp-2" value="2">
+        <label class="form-check-label" for="puzzle_xp-2">
+            🏅🎖️ <b>Some familiarity</b> I play one of these puzzle games occassionally. 
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="puzzle_xp" id="puzzle_xp-3" value="3">
+        <label class="form-check-label" for="puzzle_xp-3">
+            🏅🎖️🏅 <b>Very familiar</b> I play one of these puzzle games regularly. 
+        </label>
+    </div>
+
+    <hr>
+
+    <h5>Z3 Experience</h5>
+
+    <i>Do you deal with solvers and Z3 in your everyday life?</i>
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="z3_xp" id="z3_xp-1" value="1">
+        <label class="form-check-label" for="z3_xp-1">
+            🏅 <b>No Experience</b> I have never used Z3 earlier.
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="z3_xp" id="z3_xp-2" value="2">
+        <label class="form-check-label" for="z3_xp-2">
+            🏅🎖️ <b>Some familiarity</b> I have dealt with Z3 in the past but don't work with it regularly.
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="z3_xp" id="z3_xp-3" value="3">
+        <label class="form-check-label" for="z3_xp-3">
+            🏅🎖️🏅 <b>Very familiar</b> I use Z3 regularly in my life. 
+        </label>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary mt-5">Submit</button>
+</form>
+
+</div>
+
+{% endblock %}

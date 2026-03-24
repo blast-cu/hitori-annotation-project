@@ -1,4 +1,4 @@
-# Hitori Annotation 
+# The Hitori Project 
 
 ## Overview 
 

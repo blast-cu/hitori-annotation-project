@@ -20,7 +20,7 @@ After learning the basics of Hitori, you will be presented with steps from vario
 
 You will provide feedback on how well our neurosymbolic approach explains a step to a human. 
 
-In shor, *you will*
+*In short, you will*
 
 1. be taught how Hitori works 
 2. will learn to use our annotation tool 

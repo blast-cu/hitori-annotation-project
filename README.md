@@ -1,45 +1,31 @@
-# Hitori Annotation Pilot 
+# Hitori Annotation 
 
 ## Overview 
 
-Hitori is a Japanese puzzle game, much like Sudoku. 
-There are a set of rules in order to "solve" the puzzle, and the solution is NP-hard complexity. 
+Hitori is a Japanese pencil puzzle game, much like Sudoku. 
+There are a set of rules in order to "solve" the puzzle, and the solution has an NP-hard complexity. 
 
-Needless to say, LLMs can't solve the puzzle by itself. 
+Despite recent advances in LLMs, they still cannot solve these pencil puzzles.  
 
-A group of researchers and I came up with a neurosymbolic method to solve the puzzle. 
+We are a group of researchers who came up with a neurosymbolic method to solve the puzzle. 
 The method ties in the rigor of symbolic solvers with the experessivity of neural methods, allowing to come up with terse solutions that are still understandable to humans. 
 
 We want to do a human evaluation to measure the usefulness of the solution. 
 
 ## Where you come in
 
-Prior to doing a full-scale annotation evaluation, we want to pilot the solution in this lab meeting to get feedback on the annotation tool itself. 
+We wish to conduct a study, to better understand our neurosymbolic approach. You will be participants in this study.
 
-Today, **you will**
+After learning the basics of Hitori, you will be presented with steps from various Hitori puzzles that were solved through our neurosymbolic approach.
+
+You will provide feedback on how well our neurosymbolic approach explains a step to a human. 
+
+In shor, *you will*
 
 1. be taught how Hitori works 
-2. will learn to use the tool 
+2. will learn to use our annotation tool 
 3. will conduct annotation on a small number of steps
 
-We hope to get:
+## Thank you!
 
-1. Preliminary results from your annotation. 
-2. Feedback on the user experience when using the annotation. 
-3. Feedback on the training session. 
-
-## Schedule Overview 
-
-- 10:30-10:35 Setup and Overview of annotation tool 
-- 10:35-10:50 Understanding Hitori Rules
-- 10:50-11:00 Exploring Rubric through some select examples
-- 11:00-12:00 Conducting annotations
-
-## Start by: 
-
-1. Cloning `hitori-annotation-project` from the BLAST repository. 
-2. Install dependencies with `pip install -r requirements.txt` 
-3. Run the app with `python -m app`
-4. Open the app in your browser at `http://localhost:8000`
-
-> Please tell me any thoughts or ideas you have regarding the project and tool. This will help me improve for the actual rollout. Thanks!
+> For any feedback or questions, please email: dasr8731@colorado.edu

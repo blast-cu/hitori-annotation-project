@@ -122,7 +122,7 @@
                 1
             ]
         ],
-        "answer": "**Sandwich Lemma** \n\n If a number is sandwiched between 2 identical numbers, then it must be unshaded. \n\n This is just an extension of the Uniqueness and Separation rules. \n\n 1. Let us assume that `r4c2` (sandwiched in its row), was shaded. \n\n 2. At least one of it's neighbors needs to be shaded (uniqueness rule). \n\n 3. However, shading either of them will violate the separation rule. \n\n Thus, any cell sandwiched between the cells with the same value has to be unshaded. ",
+        "answer": "**Sandwich Lemma** \n\n If a number is sandwiched between two identical numbers, then it must be unshaded. \n\n This is just an consequence of the Uniqueness and Separation rules. \n\n 1. Let us assume that `r4c2` (sandwiched in its row), was shaded. \n\n 2. At least one of it's neighbors needs to be shaded (uniqueness rule). \n\n 3. However, shading either of them will violate the separation rule. \n\n Thus, any cell sandwiched between two cells with the same value (either vertically or horizontally) has to be unshaded. ",
         "reasoning": ""
     }
 ]

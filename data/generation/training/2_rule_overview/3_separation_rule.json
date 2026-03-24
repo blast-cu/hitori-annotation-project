@@ -122,7 +122,7 @@
                 1
             ]
         ],
-        "answer": "**Separation Rule** \n\n Two shaded cells **cannot** touch each other. \n\n From the previous step, we know that `r3c4` is shaded. \n\n We can also see that `r3c4` also shares an edge with `r4c4`. \n\n Therefore, `r4c4` has to be shaded.",
+        "answer": "**Separation Rule** \n\n Two shaded cells **cannot** share an edge. \n\n This means that shaded cells can’t touch each other vertically or horizontally. They could however touch in a corner.  \n\n From the previous step, we know that `r4c5` is shaded. \n\n We also see that `r4c5` shares an edge with `r4c4`. \n\n Therefore, `r4c4` has to be shaded.",
         "reasoning": ""
     }
 ]

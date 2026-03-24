@@ -122,7 +122,7 @@
                 1
             ]
         ],
-        "answer": "**Uniqueness Rule** \n\n An **unshaded** cell’s number must be unique in its row and column. If a number is unshaded, then all the numbers in that row/column must be shaded. \n\n We see that `r3c5` is unshaded. \n\n This is why `r3c1` must be shaded.",
+        "answer": "**Uniqueness Rule** \n\n An **unshaded** cell’s number must be unique in its row and column. \n\nIf a number is unshaded, then all occurrences of the same number in that row/column must be shaded. \n\n We see that `r3c5` is unshaded. \n\n This is why `r3c1` must be shaded.",
         "reasoning": ""
     }
 ]

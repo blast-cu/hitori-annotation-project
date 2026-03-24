@@ -33,7 +33,7 @@
                 {% for rd in understand_rubric_dimensions %} 
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="{{rubric.shortname}}" id="{{rubric.shortname}}-{{rd.value}}" value="{{rd.value}}" required>
-                        <label class="form-check-label mx-2" for="{{rubric.shortname}}-{{rd.value}}">{{rd.name}}</label>
+                        <label class="form-check-label mx-2" for="{{rubric.shortname}}-{{rd.value}}">{{rd.name | safe}}</label>
                     </div>
                 {% endfor %}
                 

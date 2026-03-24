@@ -123,7 +123,7 @@
             ]
         ],
         
-        "answer": "*1. File Navigation:* You can use this to move forward or backward.  \n\n`Unfortunately, the app does not save state - if you forget to hit submit, you will have to do the puzzle again.` \n\n*2. Goal Line:* What is this step trying to achieve? Here you can see that we are trying to show `r2c3` is going to be unshaded.",
+        "answer": "*1. File Navigation:* You can use this to move forward or backward.  \n\n`Unfortunately, the app does not save state - if you forget to hit submit, you will have to annotate the puzzle again.` \n\n*2. Goal Line:* What is this step trying to achieve? Here you can see that we are trying to show `r2c3` is going to be unshaded.",
         "reasoning": ""
     }
 ]

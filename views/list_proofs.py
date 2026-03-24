@@ -7,7 +7,7 @@ def list_proofs(user) :
 
     src_dir = "data/generation/"
     user_data = json.load(open('data/users.json'))
-    experiment_versions = [user_data[user]['assigned_task_set'] , 'training']
+    experiment_versions = ['training' , user_data[user]['assigned_task_set']]
 
     print(experiment_versions)
     

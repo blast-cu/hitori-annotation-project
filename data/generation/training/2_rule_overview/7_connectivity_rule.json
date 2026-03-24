@@ -122,7 +122,7 @@
                 1
             ]
         ],
-        "answer": "**Connectivity Rule** All the unshaded cells should form one contiguous region. \n\n If we were to shade `r5c4`, `r5c5` will get trapped and connectivity will be broken. \n\n Hence, `r5c4` needs to be unshaded ",
+        "answer": "**Connectivity Rule** All the unshaded cells should form one contiguous region. \n\n If we were to shade `r5c4`, `r5c5` would get trapped and connectivity will be broken. \n\n Hence, `r5c4` needs to be unshaded.",
         "reasoning": ""
     }
 ]

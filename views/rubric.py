@@ -2,8 +2,8 @@
 rubrics = [
 
     {
-        'name' : 'Is this explanation factual?',
-        'definition' : '<br><em>If not factual, please use the notes to describe the error.</em>', 
+        'name' : 'Factual Accuracy: Does the explanation correctly apply Hitori rules without missing anything? ',
+        'definition' : '<br><em>Errors may include mistakes in indentifying uniqueness, shading logic, adjacency constraints, or connectivity.<br>Gaps include skipping steps or missing important information.</em>', 
         'shortname': 'corr'
     } , 
 
@@ -13,18 +13,18 @@ rubrics = [
 rubric_dimensions = [
 
     {
-        'name' : ' 👍 <b>No Errors</b>' , 
-        'value' : 5
+        'name' : ' 👍 <b>No errors and no gaps.</b>' , 
+        'value' : 3
     } , 
 
     {
-        'name' : '👎 <b>Minor Errors: </b> Small errors that can be ignored and does not affect the whole explanation.' , 
-        'value' : 3
+        'name' : '👎 <b>Minor errors or minor gaps: </b> Small mistakes that don\'t invalidate the overall reasoning or small gaps in explanation that can easily be inferred.' , 
+        'value' : 2
     } , 
 
     
     {
-        'name' : '❌ <b>Major Errors: </b> Significant errors that cannot be overcome, and affect the overall explanation of the puzzle.' , 
+        'name' : '❌ <b>Major Errors or Major Gaps: </b> Catastrophic mistakes that make the reasoning wrong or misleading, or significant gaps that cannot be be overcome.' , 
         'value' : 1
     } , 
 ]
@@ -32,7 +32,7 @@ rubric_dimensions = [
 understand_rubrics = [
 
     {
-        'name' : 'Does explanation provided help you understand the step?',
+        'name' : 'Clarity After reading the explanation, do you understand why this step was taken?',
         'definition' : '<br><em>Does the step\'s outcome become clear by following the explanation?</em>', 
         'shortname': 'understand'
     } 
@@ -42,18 +42,18 @@ understand_rubrics = [
 understand_rubric_dimensions = [
 
     {
-        'name' : '😊 Helps understand completely! ' , 
-        'value' : 5
+        'name' : '😊 <b>Completely clear — </b>I can follow the reasoning and understand the outcome! ' , 
+        'value' : 3
     } , 
 
     {
-        'name' : '🤨 Helps understand somewhat.' , 
-        'value' : 3
+        'name' : '🤨 <b>Somewhat clear — </b>I get the general idea but parts are confusing or vague.' , 
+        'value' : 2
     } , 
 
     
     {
-        'name' : '😭 Did not help at all.' , 
+        'name' : '😭 <b>Not clear — </b>I cannot follow what the explanation is trying to say.' , 
         'value' : 1
     } , 
 

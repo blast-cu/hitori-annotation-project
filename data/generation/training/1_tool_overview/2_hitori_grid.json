@@ -123,7 +123,7 @@
             ]
         ],
         
-        "answer": "The grid is where you need to work through your problems. \n\n- A blue cell is considered shaded. \n- A yellow cell is considered unshaded. \n- Greyed cells were shaded/unshaded in prior steps. \n- A red circle is drawn around the cell under investigation. \n\n **Using the Grid** \n\n- Click once to shade a cell (mark blue). \n- Click again to unshade a cell (mark yellow). \n- Click again to remove all marks from a cell (mark white).\n\n**Explanation Pane** \n\n You are reading this on the explanation pane. You can scroll through if you cannot see an entire explanation at once.",
+        "answer": "The grid is where you need to work through your problems. \n\n- A blue cell is considered shaded. \n- A yellow cell is considered unshaded. \n- A white cell is still undetermined. \n- Greyed cells were shaded/unshaded in prior steps. \n- The red circle marks the cell under investigation. \n\n **Using the Grid** \n\n- Click once to shade a cell (mark blue). \n- Click again to unshade a cell (mark yellow). \n- Click again to remove all marks from a cell (mark white).\n\n**Explanation Pane** \n\n You are reading this on the explanation pane. You can scroll through if you cannot see an entire explanation at once. \n\n You can now go back to the menu by clicking Result Visualization in the navigation bar on top.",
         "reasoning": ""
     }
 ]

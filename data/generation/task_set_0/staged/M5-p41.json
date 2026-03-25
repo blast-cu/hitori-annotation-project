@@ -1,0 +1,70 @@
+[
+    {
+        "step": "5",
+        "target": "r2c2",
+        "value": "unshaded",
+        "unshaded_cells": [],
+        "shaded_cells": [
+            "r1c3"
+        ],
+        "all_unshaded_cells": [
+            [
+                false,
+                true,
+                false
+            ],
+            [
+                true,
+                true,
+                true
+            ],
+            [
+                false,
+                false,
+                false
+            ]
+        ],
+        "all_shaded_cells": [
+            [
+                false,
+                false,
+                true
+            ],
+            [
+                false,
+                false,
+                false
+            ],
+            [
+                false,
+                false,
+                false
+            ]
+        ],
+        "z3": "(let ((a!1 (unit-resolution (unit-resolution (asserted (or c01_03 c02_02 c03_03))\n                                             (asserted (not c01_03))\n                                             (or c02_02 c03_03))\n                            (asserted (not c02_02))\n                            c03_03)))\n  (unit-resolution (asserted (or (not c03_02) (not c03_03)))\n                   a!1\n                   (unit-resolution (asserted (or c02_02 c03_02))\n                                    (asserted (not c02_02))\n                                    c03_02)\n                   false))",
+        "solver_explanation": "Reasons for the clauses in the proof\n(or c02_02 c03_02): r2c2 and r3c2 cannot both be shaded because they share an edge (it would violate the separation rule)\n(or c01_03 c02_02 c03_03): r2c3 must have an unshaded neighbor not to break connectivity\n(or (not c03_02) (not c03_03)): leaving both r3c2 and r3c3 unshaded would break uniqueness because they have the same symbol\n",
+        "puzzle_img": "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",
+        "step_idx": 4,
+        "src_path": "data/proofs/v6/p41.json",
+        "puzzle_id": "p41",
+        "grid": [
+            [
+                "A",
+                "B",
+                "A"
+            ],
+            [
+                "B",
+                "C",
+                "A"
+            ],
+            [
+                "A",
+                "C",
+                "C"
+            ]
+        ],
+        "answer": "Let's break down the problem step by step using the beginner-friendly rulebook.\n\n---\n\n### Step 1: Understanding the Constraints\nWe have three key constraints:\n1. **Separation Rule**: Shaded cells cannot touch horizontally or vertically.\n2. **Connectivity Rule**: All unshaded cells must form one continuous path.\n3. **Uniqueness Rule**: No duplicate symbols in any row or column.\n\n---\n\n### Step 2: Analyzing the Assumption\nAssume that `r2c2` is shaded.\n\n- Since `r1c3` is already shaded (prior information), and `r2c3` needs an unshaded neighbor to maintain connectivity, one of `r2c2`, `r3c3`, or `r2c4` must be unshaded.\n- However, we assumed `r2c2` is shaded.\n\n---\n\n### Step 3: Applying the Separation Rule\nGiven that `r2c2` is shaded:\n- **Separation Rule**: Shaded cells cannot touch horizontally or vertically. Therefore, `r3c2` must be unshaded because it shares an edge with `r2c2`.\n\n---\n\n### Step 4: Applying the Uniqueness Rule\nNow, consider `r3c2` and `r3c3`:\n- They have the same symbol.\n- **Uniqueness Rule**: Both cannot be unshaded. Since we deduced that `r3c2` is unshaded, `r3c3` must be shaded.\n\n---\n\n### Step 5: Identifying the Contradiction\nHowever, shading `r3c3` creates a problem:\n- **Separation Rule**: Shaded cells cannot touch horizontally or vertically. Shading `r3c3` would violate this rule with its neighbor `r2c3`, which needs to remain unshaded for connectivity.\n\n---\n\n### Step 6: Conclusion\nThe assumption that `r2c2` is shaded leads to a contradiction. Therefore, **`r2c2` must be unshaded** to satisfy all the rules.\n\n---\n\nBy following these logical steps and applying the rulebook, we ensure that the puzzle adheres to all constraints without any contradictions.",
+        "reasoning": ""
+    }
+]

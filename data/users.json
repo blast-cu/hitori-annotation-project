@@ -1,3 +1,62 @@
 {
-    
+    "dasr8731": {
+        "hitori_xp": "2",
+        "puzzle_xp": "2",
+        "z3_xp": "1",
+        "assigned_task_set": "task_set_0"
+    },
+    "fabio": {
+        "hitori_xp": "3",
+        "puzzle_xp": "3",
+        "z3_xp": "3",
+        "assigned_task_set": "task_set_0"
+    },
+    "mama7970": {
+        "hitori_xp": "1",
+        "puzzle_xp": "2",
+        "z3_xp": "1",
+        "assigned_task_set": "task_set_14"
+    },
+    "roda9210": {
+        "hitori_xp": "2",
+        "puzzle_xp": "1",
+        "z3_xp": "1",
+        "assigned_task_set": "task_set_14"
+    },
+    "sakh1520": {
+        "hitori_xp": "2",
+        "puzzle_xp": "2",
+        "z3_xp": "1",
+        "assigned_task_set": "task_set_5"
+    },
+    "obju3693": {
+        "hitori_xp": "1",
+        "puzzle_xp": "2",
+        "z3_xp": "1",
+        "assigned_task_set": "task_set_5"
+    },
+    "alle5715": {
+        "hitori_xp": "1",
+        "puzzle_xp": "2",
+        "z3_xp": "1",
+        "assigned_task_set": "task_set_3"
+    },
+    "luwh8285": {
+        "hitori_xp": "1",
+        "puzzle_xp": "2",
+        "z3_xp": "1",
+        "assigned_task_set": "task_set_3"
+    },
+    "soks4681": {
+        "hitori_xp": "1",
+        "puzzle_xp": "1",
+        "z3_xp": "1",
+        "assigned_task_set": "task_set_8"
+    },
+    "grhu6673": {
+        "hitori_xp": "1",
+        "puzzle_xp": "3",
+        "z3_xp": "1",
+        "assigned_task_set": "task_set_8"
+    }
 }

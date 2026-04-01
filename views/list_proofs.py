@@ -7,7 +7,7 @@ def list_proofs(user) :
 
     src_dir = "data/generation/"
     user_data = json.load(open('data/users.json'))
-    experiment_versions = ['training' , user_data[user]['assigned_task_set']]
+    experiment_versions = ['training' , user_data[user]['assigned_task_set']] + [os.path.basename(dir) for dir in glob.glob('data/generation/*gemini2.5')]
 
     print(experiment_versions)
     
